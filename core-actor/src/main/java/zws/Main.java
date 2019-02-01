@@ -6,7 +6,7 @@ import zws.test.TestPkgScanSeq;
 
 public class Main {
 
-    @Autowired public TestPkgScanSeq obj;
+    @Autowired public TestPkgScanSeq obj; // 1
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext appCtx = new ClassPathXmlApplicationContext("applicationContext.xml");
