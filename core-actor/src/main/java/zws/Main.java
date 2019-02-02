@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import zws.test.TestPkgScanSeq;
 
 public class Main {
-
+    // ni mei de 
     @Autowired public TestPkgScanSeq obj; // 4
 
     public static void main(String[] args) {
