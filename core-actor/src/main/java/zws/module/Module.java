@@ -1,6 +1,6 @@
-package zws.player;
+package zws.module;
 
-interface Module {
+public interface Module {
 
     default void onLoginLoadData() {}
 

@@ -31,7 +31,11 @@ public class EventBus {
             while ((e = queue.poll()) != null) {
                 List<BiConsumer<Module, Event>> listenerList = listenerMap.get(event.getClass());
                 for (BiConsumer<Module, Event> l : listenerList) {
+                    try {
 //                    l.accept(module, e);
+                    } catch (Throwable t) {
+                        // do something
+                    }
                 }
                 if (c++ > 128) {
                     System.err.println("event bus: there may be a loop in a event bus");
