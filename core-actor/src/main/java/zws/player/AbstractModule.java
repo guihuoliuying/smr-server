@@ -13,4 +13,6 @@ public class AbstractModule implements Module {
 
     protected void fire(Event event) { self.fire(event); }
 
+
+
 }

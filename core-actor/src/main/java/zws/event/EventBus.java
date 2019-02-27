@@ -45,7 +45,6 @@ public class EventBus {
         }
     }
 
-    @OnEvent
     public void listenEvent(Module m, Event e) {
         System.out.println("hello hell");
     }

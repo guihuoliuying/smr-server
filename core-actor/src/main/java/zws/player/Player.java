@@ -5,6 +5,7 @@ import zws.actor.Actor;
 import zws.event.Event;
 import zws.event.EventBus;
 import zws.module.Module;
+import zws.packet.Packet;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,8 +17,14 @@ public class Player extends AbstractActor {
 
     @Override
     public void onReceived(Object message, Actor sender) {
-        if (message instanceof Packet) {
-            // method.invoke(module, message);
+        if (message instanceof PlayerPacket) {
+            PlayerPacket pkt = (PlayerPacket) message;
+            pkt.player(this);
+            try {
+                pkt.exec();
+            } catch (Throwable t) {
+
+            }
         }
     }
 
